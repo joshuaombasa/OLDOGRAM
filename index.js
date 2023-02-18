@@ -47,6 +47,6 @@ topAreaText.innerHTML += `
 middleSection.innerHTML = `
                            <img src="${posts[0].post}" alt="" class="middle-section-img" >
                            `
-lowerSection.innerHTML = `
-                          
-                          `
+lowerSection.innerHTML += `
+                           <p class="bold-text">${posts[0].likes} likes</p>
+                           <P><span class="bold-text">${posts[0].username}</span> ${posts[0].comment}</p>`
