@@ -34,19 +34,47 @@ const topAreaText = document.getElementById("top-area-text")
 const middleSection = document.getElementById("middle-section")
 const lowerSection = document.getElementById("lower-section")
 let html = ''
-// for (let i=0; i < posts.length; i++) {
-//     html += ``
 
-// }
 
-userProfilePic.src = posts[0].avatar
-topAreaText.innerHTML += `
-                          <p class="top-area-name">${posts[0].name}</p>
-                          <p>${posts[0].location}</p>
-                        `
-middleSection.innerHTML = `
-                           <img src="${posts[0].post}" alt="" class="middle-section-img" >
+for (let i=0; i < posts.length; i++) {
+    topArea.innerHTML = `
+                      <img src="${posts[i].avatar}" alt="" class="user-profile-pic" id="user-profile-pic">
+                      <div class="top-area-text" id="top-area-text">
+                      <p class="top-area-name">${posts[i].name}</p>
+                      <p>${posts[i].location}</p>
+                      </div>
+                    `
+
+    middleSection.innerHTML = `
+                           <img src="${posts[i].post}" alt="" class="middle-section-img" >
                            `
-lowerSection.innerHTML += `
-                           <p class="bold-text">${posts[0].likes} likes</p>
-                           <P><span class="bold-text">${posts[0].username}</span> ${posts[0].comment}</p>`
+    lowerSection.innerHTML = ` <div class="icon-container">
+                               <img src="images/icon-heart.png" alt="" class="icon">
+                               <img src="images/icon-comment.png" alt="" class="icon">
+                               <img src="images/icon-dm.png" alt="" class="icon">
+                           </div>
+                           <p class="bold-text">${posts[i].likes} likes</p>
+                           <P><span class="bold-text">${posts[i].username}</span> ${posts[i].comment}</p>
+                           `
+
+}
+
+// topArea.innerHTML = `
+//                       <img src="${posts[0].avatar}" alt="" class="user-profile-pic" id="user-profile-pic">
+//                       <div class="top-area-text" id="top-area-text">
+//                       <p class="top-area-name">${posts[0].name}</p>
+//                       <p>${posts[0].location}</p>
+//                       </div>
+//                     `
+
+// middleSection.innerHTML = `
+//                            <img src="${posts[0].post}" alt="" class="middle-section-img" >
+//                            `
+// lowerSection.innerHTML = ` <div class="icon-container">
+//                                <img src="images/icon-heart.png" alt="" class="icon">
+//                                <img src="images/icon-comment.png" alt="" class="icon">
+//                                <img src="images/icon-dm.png" alt="" class="icon">
+//                            </div>
+//                            <p class="bold-text">${posts[0].likes} likes</p>
+//                            <P><span class="bold-text">${posts[0].username}</span> ${posts[0].comment}</p>
+//                            `
