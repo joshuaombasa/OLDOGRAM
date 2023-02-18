@@ -32,6 +32,7 @@ const topArea = document.getElementById("top-area")
 const userProfilePic = document.getElementById("user-profile-pic")
 const topAreaText = document.getElementById("top-area-text")
 const middleSection = document.getElementById("middle-section")
+const lowerSection = document.getElementById("lower-section")
 let html = ''
 // for (let i=0; i < posts.length; i++) {
 //     html += ``
@@ -43,6 +44,9 @@ topAreaText.innerHTML += `
                           <p class="top-area-name">${posts[0].name}</p>
                           <p>${posts[0].location}</p>
                         `
-middleSection.innerHTML += `
-                           <img src="$${posts[0].post}" alt="" >
+middleSection.innerHTML = `
+                           <img src="${posts[0].post}" alt="" class="middle-section-img" >
                            `
+lowerSection.innerHTML = `
+                          
+                          `
