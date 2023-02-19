@@ -35,11 +35,11 @@ const middleSection = document.getElementById("middle-section")
 const lowerSection = document.getElementById("lower-section")
 const main = document.getElementById("main")
 const likeBtn = document.getElementById("like-btn")
+// let likesNumber  = Number(document.getElementById("likes-number").textContent)
+
 let html = ''
 
-likeBtn.addEventListener("click", function () {
 
-})
 for (let i=0; i < posts.length; i++) {
     main.innerHTML += `<div class="main-styling"><header>
                         <div class="container">
@@ -81,22 +81,9 @@ for (let i=0; i < posts.length; i++) {
 
 }
 
-// topArea.innerHTML = `
-//                       <img src="${posts[0].avatar}" alt="" class="user-profile-pic" id="user-profile-pic">
-//                       <div class="top-area-text" id="top-area-text">
-//                       <p class="top-area-name">${posts[0].name}</p>
-//                       <p>${posts[0].location}</p>
-//                       </div>
-//                     `
+likeBtn.addEventListener("click", function() {
+    topArea.style.color = 'red'
+    
+})
 
-// middleSection.innerHTML = `
-//                            <img src="${posts[0].post}" alt="" class="middle-section-img" >
-//                            `
-// lowerSection.innerHTML = ` <div class="icon-container">
-//                                <img src="images/icon-heart.png" alt="" class="icon">
-//                                <img src="images/icon-comment.png" alt="" class="icon">
-//                                <img src="images/icon-dm.png" alt="" class="icon">
-//                            </div>
-//                            <p class="bold-text">${posts[0].likes} likes</p>
-//                            <P><span class="bold-text">${posts[0].username}</span> ${posts[0].comment}</p>
-//                            `
+g
