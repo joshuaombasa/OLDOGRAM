@@ -62,6 +62,10 @@ html, body {
     
 }
 
+.icon:hover {
+    opacity: 1.0;
+}
+
 .bold-text {
     font-weight: bold;
 }
