@@ -1,4 +1,4 @@
-const posts = [
+export default  [
     {
         name: "Vincent van Gogh",
         username: "vincey1853",
@@ -28,4 +28,3 @@ const posts = [
     }
 ]
 
-export default posts
